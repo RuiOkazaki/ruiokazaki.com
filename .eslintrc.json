@@ -44,6 +44,11 @@
             "pattern": "@/components/**",
             "group": "internal",
             "position": "before"
+          },
+          {
+            "pattern": "@/libs/**",
+            "group": "internal",
+            "position": "before"
           }
         ]
       }

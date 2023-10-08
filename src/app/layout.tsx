@@ -1,9 +1,7 @@
-import './globals.css';
-import { Inter } from 'next/font/google';
-
 import type { Metadata } from 'next';
 
-const inter = Inter({ subsets: ['latin'] });
+import { LINESeedJP } from '@/libs/next-font';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -12,8 +10,8 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ja">
+      <body className={LINESeedJP.className}>{children}</body>
     </html>
   );
 };
