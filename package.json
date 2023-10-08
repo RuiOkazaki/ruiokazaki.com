@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "tsc": "tsc --noEmit",
     "lint": "next lint",
     "format": "prettier --cache --check .",
     "fix": "prettier --chche --write . && next lint --fix"
@@ -30,11 +31,5 @@
     "eslint-plugin-unused-imports": "^3.0.0",
     "prettier": "^3.0.3",
     "typescript": "^5"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "volta": {
-    "node": "18.18.0"
   }
 }
