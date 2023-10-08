@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css';
 
 import { vars } from '@/libs/mantine/theme';
 
-export const title = style({
+const title = style({
   color: vars.colors.black,
   fontSize: rem(100),
   fontWeight: 900,
@@ -21,3 +21,9 @@ export const title = style({
     },
   },
 });
+
+const styles = {
+  title,
+};
+
+export default styles;
