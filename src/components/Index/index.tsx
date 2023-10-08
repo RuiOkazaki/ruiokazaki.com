@@ -1,6 +1,6 @@
 import { Title, Text, Anchor } from '@mantine/core';
 
-import * as styles from './index.css';
+import styles from './index.css';
 
 export const Index = () => {
   return (
