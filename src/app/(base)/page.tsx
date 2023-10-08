@@ -1,10 +1,12 @@
 import { Title, Text, Anchor } from '@mantine/core';
 
-import styles from './index.css';
+import { ColorSchemeToggle } from '@/components/functional/ColorSchemeToggle';
 
-export const Index = () => {
+import styles from '@/app/(base)/page.css';
+
+const Welcome = () => {
   return (
-    <>
+    <main>
       <Title className={styles.title} ta="center" mt={100}>
         Welcome to{' '}
         <Text
@@ -25,6 +27,9 @@ export const Index = () => {
         </Anchor>
         . To get started edit index.tsx file.
       </Text>
-    </>
+      <ColorSchemeToggle />
+    </main>
   );
 };
+
+export default Welcome;
