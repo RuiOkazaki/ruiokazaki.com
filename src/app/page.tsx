@@ -1,4 +1,4 @@
-import { Index } from '@/components/Index/index';
+import { Index } from '@/components/Home';
 
 const Welcome = () => {
   return <Index />;
