@@ -1,7 +1,9 @@
+import { ColorSchemeScript } from '@mantine/core';
+
 import type { Metadata } from 'next';
 
+import { CustomMantineProvider } from '@/libs/mantine/provider';
 import { LINESeedJP } from '@/libs/next-font';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -11,7 +13,17 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ja">
-      <body className={LINESeedJP.className}>{children}</body>
+      <head>
+        <ColorSchemeScript />
+        <link rel="shortcut icon" href="/favicon.svg" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+        />
+      </head>
+      <body className={LINESeedJP.className}>
+        <CustomMantineProvider>{children}</CustomMantineProvider>
+      </body>
     </html>
   );
 };
