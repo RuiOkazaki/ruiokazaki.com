@@ -3,7 +3,7 @@ import '@mantine/core/styles.css';
 
 import type { Metadata } from 'next';
 
-import { Noise } from '@/components/Noise';
+import { Noise } from '@/components/ui/Noise';
 
 import { CustomMantineProvider } from '@/libs/mantine/provider';
 import { LINESeedJP } from '@/libs/next-font';
