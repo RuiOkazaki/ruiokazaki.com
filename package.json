@@ -13,9 +13,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@next/font": "^13.5.4",
+    "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@tsconfig/next": "^2.0.1",
