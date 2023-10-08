@@ -1,4 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
 
-module.exports = nextConfig;
+const withVanillaExtract = createVanillaExtractPlugin();
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+};
+
+module.exports = withVanillaExtract(nextConfig);
