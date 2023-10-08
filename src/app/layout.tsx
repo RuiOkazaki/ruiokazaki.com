@@ -3,11 +3,10 @@ import '@mantine/core/styles.css';
 
 import type { Metadata } from 'next';
 
-import { Noise } from '@/components/ui/Noise';
-
 import { CustomMantineProvider } from '@/libs/mantine/provider';
 import { LINESeedJP } from '@/libs/next-font';
 
+import { Noise } from './_components/Noise';
 import styles from './global.css';
 
 export const metadata: Metadata = {
