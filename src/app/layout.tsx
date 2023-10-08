@@ -1,9 +1,14 @@
 import { ColorSchemeScript } from '@mantine/core';
+import '@mantine/core/styles.css';
 
 import type { Metadata } from 'next';
 
+import { Noise } from '@/components/Noise';
+
 import { CustomMantineProvider } from '@/libs/mantine/provider';
 import { LINESeedJP } from '@/libs/next-font';
+
+import styles from './global.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -12,10 +17,9 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="ja">
+    <html lang="ja" className={styles.resetHeight}>
       <head>
         <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
@@ -39,8 +43,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={LINESeedJP.className}>
-        <CustomMantineProvider>{children}</CustomMantineProvider>
+      <body className={`${LINESeedJP.className} ${styles.resetHeight}`}>
+        <CustomMantineProvider>
+          <Noise />
+          {children}
+        </CustomMantineProvider>
       </body>
     </html>
   );
