@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FC } from 'react';
 
 import { getIssues } from '@/libs/octokit/getIssues';
@@ -8,7 +9,9 @@ export const BlogList: FC = async () => {
   return (
     <ul>
       {blogs.map((blog) => (
-        <li key={blog.id}>{blog.title}</li>
+        <li key={blog.id}>
+          <Link href={`/blogs/${blog.number}`}>{blog.title}</Link>
+        </li>
       ))}
     </ul>
   );

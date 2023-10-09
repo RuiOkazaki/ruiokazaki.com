@@ -4,7 +4,7 @@ import { ColorSchemeToggle } from '@/components/functional/ColorSchemeToggle';
 
 import styles from '@/app/(base)/page.css';
 
-const Welcome = () => {
+const page = () => {
   return (
     <main>
       <Title className={styles.title} ta="center" mt={100}>
@@ -32,4 +32,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default page;

@@ -1,12 +1,12 @@
-import { FC } from 'react';
+import { NextPage } from 'next';
 
 import { BlogList } from './_components/BlogList';
 
-const Blogs: FC = () => {
+const page: NextPage = () => {
   return (
     <main>
       <BlogList />
     </main>
   );
 };
-export default Blogs;
+export default page;
