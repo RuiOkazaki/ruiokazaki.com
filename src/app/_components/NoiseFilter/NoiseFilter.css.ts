@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-const noise = style({
+const noiseFilter = style({
   pointerEvents: 'none',
   zIndex: 1000,
 
@@ -18,7 +18,7 @@ const noise = style({
 });
 
 const styles = {
-  noise,
+  noiseFilter,
 };
 
 export default styles;

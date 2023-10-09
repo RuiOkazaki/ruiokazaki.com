@@ -1,16 +1,16 @@
 import { Box } from '@mantine/core';
 import { FC } from 'react';
 
-import styles from './noise.css';
+import styles from './NoiseFilter.css';
 
-export const Noise: FC = () => {
+export const NoiseFilter: FC = () => {
   return (
     <Box
       aria-hidden
       pos={'fixed'}
       inset={0}
       opacity={0.35}
-      className={styles.noise}
+      className={styles.noiseFilter}
     >
       <svg>
         <filter id="noise">
