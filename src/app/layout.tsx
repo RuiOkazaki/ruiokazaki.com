@@ -1,9 +1,11 @@
-import { Box, ColorSchemeScript, Flex } from '@mantine/core';
+import { Box, ColorSchemeScript } from '@mantine/core';
 import '@mantine/core/styles.css';
 
 import { CustomMantineProvider } from '@/libs/mantine/provider';
 import { LINESeedJP } from '@/libs/next-font/lineSeedJp';
 
+import { Footer } from './_components/Footer';
+import { Header } from './_components/Header';
 import { NoiseFilter } from './_components/NoiseFilter';
 import styles from './layout.css';
 
@@ -19,17 +21,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <CustomMantineProvider>
           <NoiseFilter />
           <Box h={'100dvh'} className={styles.baseLayout}>
-            <header>
-              <Flex align={'center'} h={60}>
-                header
-              </Flex>
-            </header>
-            <Box component="main" px={'md'}>
+            <Header />
+            <Box component="main" px={'md'} maw={1000} w={'100%'} mx={'auto'}>
               {children}
             </Box>
-            <footer>
-              <Flex align={'center'}>footer</Flex>
-            </footer>
+            <Footer />
           </Box>
         </CustomMantineProvider>
       </body>

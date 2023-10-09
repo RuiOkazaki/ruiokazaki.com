@@ -1,11 +1,7 @@
-import { ColorSchemeToggle } from '@/components/functional/ColorSchemeToggle';
+import { NextPage } from 'next';
 
-const page = () => {
-  return (
-    <>
-      <ColorSchemeToggle />
-    </>
-  );
+const page: NextPage = () => {
+  return <></>;
 };
 
 export default page;
