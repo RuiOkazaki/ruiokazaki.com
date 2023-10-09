@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, BoxComponentProps } from '@mantine/core';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
 import { vars } from '@/libs/mantine/theme';
 
@@ -9,12 +9,12 @@ type Props = BoxComponentProps;
 
 export const Myself: FC<Props> = ({ ...boxComponentProps }) => {
   // TODO: カラーピッカーで色を操作する
-  const [colors, setColors] = useState({
+  const colors = {
     body: vars.colors.orange[5],
     background: vars.colors.blue[5],
     sclera: vars.colors.white,
     border: vars.colors.black,
-  });
+  };
 
   return (
     <Box
