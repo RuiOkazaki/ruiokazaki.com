@@ -22,7 +22,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <NoiseFilter />
           <Box h={'100dvh'} className={styles.baseLayout}>
             <Header />
-            <Box component="main" px={'md'} maw={1000} w={'100%'} mx={'auto'}>
+            <Box component="main" px={'md'}>
               {children}
             </Box>
             <Footer />
