@@ -2,6 +2,7 @@ import { Center, Flex, Space, Stack, Text } from '@mantine/core';
 import { NextPage } from 'next';
 
 import { Myself } from './_components/Myself';
+import { SNSLinks } from './_components/SNSLinks';
 
 const page: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const page: NextPage = () => {
         </Text>
         <Text>Make computer interfaces better for the humanities 🛠️</Text>
         <Space h={24} />
+        <SNSLinks />
         <Myself w={500} h={500} />
       </Flex>
     </Center>
