@@ -20,9 +20,9 @@ type Props = {
 
 const page: NextPage<Props> = ({ params: { blogId } }) => {
   return (
-    <main>
+    <>
       <ArticleDetail articleId={blogId} />
-    </main>
+    </>
   );
 };
 
