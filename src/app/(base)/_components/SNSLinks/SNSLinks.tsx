@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Group, useMantineTheme } from '@mantine/core';
+import { ActionIcon, Group, Tooltip, useMantineTheme } from '@mantine/core';
 import { useClipboard } from '@mantine/hooks';
 import { notifications } from '@mantine/notifications';
 import {
@@ -49,37 +49,58 @@ export const SNSLinks = () => {
 
   return (
     <Group gap={'sm'}>
-      <ActionIcon
-        component={'a'}
-        target="_blank"
-        href={'https://github.com/RuiOkazaki'}
-        variant="filled"
-        color={colors.dark[5]}
-        radius={'xl'}
-        size={32}
+      <Tooltip
+        withArrow
+        arrowSize={8}
+        label="Visit my GitHub profile"
+        position="top"
       >
-        <IconBrandGithub />
-      </ActionIcon>
-      <ActionIcon
-        component={'a'}
-        target="_blank"
-        href={'https://twitter.com/RuiOkazaki_'}
-        variant="filled"
-        color={colors.blue[5]}
-        radius={'xl'}
-        size={32}
+        <ActionIcon
+          component={'a'}
+          target="_blank"
+          href={'https://github.com/RuiOkazaki'}
+          variant="filled"
+          color={colors.dark[5]}
+          radius={'xl'}
+          size={32}
+        >
+          <IconBrandGithub />
+        </ActionIcon>
+      </Tooltip>
+      <Tooltip
+        withArrow
+        arrowSize={8}
+        label="Visit my X profile"
+        position="top"
       >
-        <IconBrandX />
-      </ActionIcon>
-      <ActionIcon
-        onClick={copyMailToClipboard}
-        variant="filled"
-        color={colors.orange[5]}
-        radius={'xl'}
-        size={32}
+        <ActionIcon
+          component={'a'}
+          target="_blank"
+          href={'https://twitter.com/RuiOkazaki_'}
+          variant="filled"
+          color={colors.blue[5]}
+          radius={'xl'}
+          size={32}
+        >
+          <IconBrandX />
+        </ActionIcon>
+      </Tooltip>
+      <Tooltip
+        withArrow
+        arrowSize={8}
+        label="Copy Gmail address to clipboard"
+        position="top"
       >
-        <IconBrandGmail />
-      </ActionIcon>
+        <ActionIcon
+          onClick={copyMailToClipboard}
+          variant="filled"
+          color={colors.orange[5]}
+          radius={'xl'}
+          size={32}
+        >
+          <IconBrandGmail />
+        </ActionIcon>
+      </Tooltip>
     </Group>
   );
 };
