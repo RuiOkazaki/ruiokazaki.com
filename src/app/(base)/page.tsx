@@ -7,7 +7,7 @@ import { SNSLinks } from './_components/SNSLinks';
 const page: NextPage = () => {
   return (
     <Center h={'100%'} w={'100%'}>
-      <Flex justify={'space-between'} w={'90%'}>
+      <Flex justify={'space-between'} w={'90%'} maw={1400}>
         <Stack justify={'center'} gap={0}>
           <Text component="h1" fz={'1.75rem'} lh={'2.5'}>
             Hi, I&apos;m{' '}
@@ -23,7 +23,7 @@ const page: NextPage = () => {
           <Space h={24} />
           <SNSLinks />
         </Stack>
-        <Myself w={500} h={500} />
+        <Myself w={450} h={450} />
       </Flex>
     </Center>
   );

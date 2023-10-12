@@ -13,6 +13,7 @@ export const CustomMantineProvider: FC<Props> = ({ children }) => (
     <Notifications
       portalProps={{
         style: {
+          zIndex: 1100,
           position: 'fixed',
           right: 0,
           bottom: 0,
