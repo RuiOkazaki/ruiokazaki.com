@@ -26,6 +26,7 @@ export const getIssues = async (
   const response = await request('GET /repos/{owner}/{repo}/issues', {
     per_page: options.limit,
     labels: ['published', ...options.labels!].join(','),
+    state: 'closed',
     ...defaultOptions,
   });
   return response;
