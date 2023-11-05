@@ -17,6 +17,7 @@ export const getIssueById = async (id: string | number) => {
     'GET /repos/{owner}/{repo}/issues/{issue_number}',
     {
       issue_number: Number(id),
+      state: 'closed',
       ...defaultOptions,
     },
   );

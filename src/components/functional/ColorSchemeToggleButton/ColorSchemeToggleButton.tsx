@@ -11,7 +11,9 @@ const colorSchemeIconMapping = {
 } as const;
 
 export const ColorSchemeToggleButton: FC = () => {
-  const { setColorScheme, colorScheme } = useMantineColorScheme();
+  const { setColorScheme, colorScheme } = useMantineColorScheme({
+    keepTransitions: true,
+  });
 
   const colorSchemeToggle = () => {
     switch (colorScheme) {
